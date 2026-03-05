@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DELTA EXPLOIT | SYSTEM OVERRIDE 2026</title>
+    <title>DELTA & SWIFT EXPLOIT | SYSTEM OVERRIDE 2026</title>
     <style>
         body {
             background-color: #000;
@@ -27,7 +27,7 @@
         .container {
             position: relative;
             z-index: 2;
-            width: 480px;
+            width: 550px; /* Tăng chiều rộng để cân bằng 3 tab */
             background: rgba(0, 0, 0, 0.95);
             border: 2px solid #00ff41;
             box-shadow: 0 0 50px rgba(0, 255, 65, 0.3);
@@ -52,7 +52,7 @@
             color: #00ff41;
             font-family: inherit;
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: 0.4s;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -81,12 +81,11 @@
 
         @keyframes glitchEffect {
             0% { opacity: 0; transform: scale(0.95); }
-            50% { opacity: 0.5; transform: scale(1.02); }
             100% { opacity: 1; transform: scale(1); }
         }
 
         .glitch-title {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 900;
             margin: 0;
             color: #fff;
@@ -105,6 +104,7 @@
             color: #fff;
             letter-spacing: 2px;
             opacity: 0.8;
+            text-transform: uppercase;
         }
 
         .download-btn {
@@ -126,7 +126,7 @@
             transform: scale(1.1) rotate(-1deg);
         }
 
-        /* Footer with Date */
+        /* Footer */
         .footer {
             padding: 20px;
             font-size: 0.75rem;
@@ -150,6 +150,7 @@
         <div class="tabs">
             <button class="tab-btn active" onclick="openTab(event, 'tab1')">Roblox Global</button>
             <button class="tab-btn" onclick="openTab(event, 'tab2')">Roblox VNG</button>
+            <button class="tab-btn" onclick="openTab(event, 'tab3')">Swift PC</button>
         </div>
 
         <div id="tab1" class="content active">
@@ -164,6 +165,12 @@
             <a href="https://bandishare.io/delta-x-apk-1/download/1/" class="download-btn" target="_blank">GET DOWNLOAD</a>
         </div>
 
+        <div id="tab3" class="content">
+            <div class="glitch-title">SWIFT PC</div>
+            <p class="desc">WINDOWS DESKTOP EXECUTOR</p>
+            <a href="Swift.exe" download="Swift.exe" class="download-btn">DOWNLOAD SWIFT.EXE</a>
+        </div>
+
         <div class="footer">
             SYSTEM STATUS: <span class="status-on">ACTIVE</span> | ENCRYPTION: AES-256<br>
             <span style="color: #666;">LAST MODIFIED: MARCH 04, 2026 - SERVER_03</span>
@@ -171,7 +178,6 @@
     </div>
 
     <script>
-        // Tab Controller
         function openTab(evt, tabName) {
             let i, content, tabBtn;
             content = document.getElementsByClassName("content");
@@ -186,7 +192,6 @@
             evt.currentTarget.classList.add("active");
         }
 
-        // Matrix Rain Effect
         const canvas = document.getElementById('matrix');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
